@@ -35,3 +35,13 @@
 
 
 // // Make the string: "Hi There! It's "sunny" out" by using the + sign:
+
+// Calculator
+
+var a =prompt("Enter the first number");
+var b=prompt("Enter the second number");
+var c=Number(a)+Number(b);
+var d=Number(a)-Number(b);
+var e=Number(a)*Number(b);
+var f=Number(a)/Number(b);
+alert("The sum is"+c +" "+ "The sub is"+d +" " +" The multiply is" +e +" "+"divide is" +f);
