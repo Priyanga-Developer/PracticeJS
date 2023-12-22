@@ -80,14 +80,37 @@ console.log(x)
 
 //rest parameter
 
-function sum(...nums) {
+function sum(a,b,...nums) {
     let newNum=0
     for (const i of nums) {
         newNum+=i;
         
     }
-  return newNum
+  return newNum+a+b
 }
 
 
 console.log(sum(1,2,3,4,5,6));
+//spread operator
+const nums=[1,2,3,4,5,6]
+function sum2(a,b,c,d,e,f) {
+    return a+b+c+d+e+f
+   
+}
+
+
+console.log(sum2(...nums));
+console.log([..."John Resig"])
+//ans
+// [
+//     "J",
+//     "o",
+//     "h",
+//     "n",
+//     " ",
+//     "R",
+//     "e",
+//     "s",
+//     "i",
+//     "g"
+// ]
