@@ -147,3 +147,10 @@ console.log(elements.join(' '));
 
 console.log(elements.join('-'));
 // Expected output: "Fire-Air-Water"]
+const str="Hello|world"
+console.log(str.length);
+console.log(str.slice(1,3));
+console.log(str.split(""));
+console.log(str.split(" "));
+console.log(str.split(","));
+console.log(str.split("|"));
