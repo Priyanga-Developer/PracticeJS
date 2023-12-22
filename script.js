@@ -45,3 +45,49 @@ var d=Number(a)-Number(b);
 var e=Number(a)*Number(b);
 var f=Number(a)/Number(b);
 alert("The sum is"+c +" "+ "The sub is"+d +" " +" The multiply is" +e +" "+"divide is" +f);
+
+// hoisting
+var one=3;
+var one=5;
+console.log(one)
+two=6;
+console.log(two)
+var two
+
+let num1=34;
+let num2=678;
+console.log(num1)
+
+// num3=5;
+// console.log(num3);
+// let num3; 
+// ReferenceError: Cannot access 'num3' before initialization
+    
+let num4;
+console.log(num4);  //undefined 
+num4=8776;
+
+name1("hIIIII")
+function name1(statements) {
+    console.log(statements)
+} // answer is "Hiii"
+
+function toCelius(params) {
+   console.log(params) 
+}
+let x= toCelius(22)
+console.log(x)
+
+//rest parameter
+
+function sum(...nums) {
+    let newNum=0
+    for (const i of nums) {
+        newNum+=i;
+        
+    }
+  return newNum
+}
+
+
+console.log(sum(1,2,3,4,5,6));
