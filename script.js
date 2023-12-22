@@ -67,6 +67,8 @@ let num4;
 console.log(num4);  //undefined 
 num4=8776;
 
+
+
 name1("hIIIII")
 function name1(statements) {
     console.log(statements)
@@ -114,3 +116,34 @@ console.log([..."John Resig"])
 //     "i",
 //     "g"
 // ]
+
+const arr1=[1,2,3,4]
+arr1.push(89)
+console.log(arr1)
+
+const arr2=[1,2,3,4]
+const arr3=arr2.concat(89)
+console.log(arr2 ,arr3)
+const months = ['Jan', 'March', 'April', 'June'];
+months.splice(2,0,"feb")
+console.log(months)
+
+const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+animals.splice(1,0,"dog");
+animals.splice(3,1);
+console.log(animals)
+const newarr=animals.slice()
+console.log(newarr)
+animals.sort();
+console.log(animals);
+
+const elements = ['Fire', 'Air', 'Water'];
+
+console.log(elements.join());
+// Expected output: "Fire,Air,Water"
+
+console.log(elements.join(' '));
+// Expected output: "FireAirWater"
+
+console.log(elements.join('-'));
+// Expected output: "Fire-Air-Water"]
