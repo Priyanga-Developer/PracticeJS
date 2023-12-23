@@ -239,7 +239,20 @@ for (let i of somearray){
 for (let i of string){
     console.log(i);//  p r i y a n g a
 }
-for (let i of object2){
-    console.log(i);// object is not itertable
+// for (let i of object2){
+//     console.log(i);// object is not itertable
+// }
+
+let count=0;
+while(count<5){
+    console.log("Hiii "+count);
+    count++;
 }
+
+let newcount=0;
+do{
+    console.log("hiii"+newcount);
+    newcount++;
+}
+while(newcount<5) // Hii 0,Hii 1, Hii 2...Hii 5
 
