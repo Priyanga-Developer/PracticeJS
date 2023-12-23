@@ -203,10 +203,43 @@ let value=selectName.value
         console.log("you are in sri lanka");
         break;
         default :
-        console.log("please select the country")
-    
-    
+        console.log("please select the country");
      }
 
+}
+
+
+let output=document.querySelector("p");
+
+for(let i=0; i<10; i++){
+    output.innerHTML+=`The number is ${i}`
+
+}
+const somearray=["apple","banana","pineapple"]
+const objectcreate={...somearray}
+console.log(objectcreate)
+for(let i in somearray){
+    output.innerHTML+=`fruit names are ${somearray[i]}`
+
+} //Fruits name are apple ,Fruits name are banana...
+for(let i in objectcreate){
+    output.innerHTML+=`fruit names are ${objectcreate[i]}`
+
+} //Fruits name are apple ,Fruits name are banana...
+const object2={
+    firstName:"Priya",
+    secondName:"Priyanga",
+    Place:"chennai"
+}
+const string="Priyanga";
+
+for (let i of somearray){
+    console.log(i) // apple banana pineapple
+}
+for (let i of string){
+    console.log(i);//  p r i y a n g a
+}
+for (let i of object2){
+    console.log(i);// object is not itertable
 }
 
