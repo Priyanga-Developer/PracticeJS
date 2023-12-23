@@ -187,3 +187,26 @@ console.log(new Date().toUTCString());
 console.log(new Date().getFullYear());
 console.log(new Date().getMonth()+1);
 console.log(new Date().getDate());
+
+const selectcountry=()=>{
+    
+let selectName=document.querySelector("#countries");
+let value=selectName.value
+    switch (value){
+        case "India":
+        console.log("u are in india");
+        break;
+        case "Pakistan":
+        console.log("u are in pakistan");
+        break;
+        case "Srilanka":
+        console.log("you are in sri lanka");
+        break;
+        default :
+        console.log("please select the country")
+    
+    
+     }
+
+}
+
