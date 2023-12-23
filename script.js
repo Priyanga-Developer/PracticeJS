@@ -154,3 +154,36 @@ console.log(str.split(""));
 console.log(str.split(" "));
 console.log(str.split(","));
 console.log(str.split("|"));
+const newArray=[1,2,3,4,5]
+const arrayfind=newArray.find((a)=> a>3)
+console.log(arrayfind);
+
+console.log(Number("23"));
+console.log(Number("23.33"));
+console.log(Number("10 yaers"));
+console.log(Number("-10"));
+console.log(Number("-10.33"));
+console.log(Number("yaers 10"));
+
+console.log(parseInt("23"));
+console.log(parseInt("23.33"));
+console.log(parseInt("10 yaers"));
+console.log(parseInt("-10"));
+console.log(parseInt("-10.33"));
+console.log(parseInt("yaers 10"));
+
+console.log(parseFloat("23"));
+console.log(parseFloat("23.33"));
+console.log(parseFloat("10 yaers"));
+console.log(parseFloat("-10"));
+console.log(parseFloat("-10.33"));
+console.log(parseFloat("yaers 10"));
+
+console.log(new Date());
+console.log(new Date().toString());
+console.log(new Date().toISOString());
+console.log(new Date().toDateString());
+console.log(new Date().toUTCString());
+console.log(new Date().getFullYear());
+console.log(new Date().getMonth()+1);
+console.log(new Date().getDate());
