@@ -256,3 +256,32 @@ do{
 }
 while(newcount<5) // Hii 0,Hii 1, Hii 2...Hii 5
 
+for (let i=0; i<4 ; i++){
+    if(i===2) break;
+    console.log(`The number is ${i}`);
+}//The number is 0 ,The number is 1
+
+for (let i=0; i<5 ; i++){
+    if(i===2) continue;
+    console.log(`The number is ${i}`);
+}//The number is 0 ,The number is 1,The number is 3 ,The number is 4 
+
+//Error handling in Javascript
+
+" use strict";
+x=3.14;
+console.log(x)
+let array1=[1,3,5,6,7]
+document.write(array1)
+document.write(array2)
+try{
+   throw new Error (err.message)
+}
+catch(err){
+    console.log(err.message)
+}
+finally{
+    document.write(array1)
+}
+
+
