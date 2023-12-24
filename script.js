@@ -401,3 +401,43 @@ numbers2.forEach(numbers2=>console.log( numbers2))
 const compose =(f,g)=>(a)=>f(g(a))
 const sum1 =num=>num+1;
 console.log(compose(sum1,sum1)(5));
+
+function persondetails(name,city,mail){
+    this.name=name,
+    this.city=city,
+    this.mail=mail
+}
+const personobj=new persondetails("priya","bangalore","uthirapriyanga@gmail.com");
+console.log(personobj.name);
+persondetails.prototype.year="2023"
+console.log(personobj.year);//2023
+
+let object1={
+    name:"priya",
+    city:"bangalore"
+}
+let object3={
+    name:"priya",
+    place:"bangalore"
+}
+const newobj1=Object.create(object1)
+newobj1.name="priyanga"
+const newObject1=Object.assign(object1,object3)
+console.log(newObject1);
+console.log(newobj1);
+
+const objectdefine={};
+Object.defineProperties( objectdefine,{
+  name:{
+    value:"Priya",
+    writable:true,
+  },
+  city:{
+    value:"Bangalore",
+    writable:true,
+  }
+})
+console.log(objectdefine);
+console.log(Object.entries(object1))//obj to arr
+console.log(Object.fromEntries(Object.entries(object1)));//arr to obj with properties
+console.log(Object.values(object1));/// to array
