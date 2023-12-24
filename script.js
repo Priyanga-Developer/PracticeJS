@@ -398,3 +398,6 @@ console.log(reducedArray2);//155 ,takes 100 as initial value and index starts fr
 
 const numbers2=[1,2,3,4,5]
 numbers2.forEach(numbers2=>console.log( numbers2))
+const compose =(f,g)=>(a)=>f(g(a))
+const sum1 =num=>num+1;
+console.log(compose(sum1,sum1)(5));
