@@ -10,7 +10,7 @@
     <div>
         <h1>JS practice</h1>
         <p id="output"></p>
-        
+
         <button onclick="this.style.color='blue' ">Click me</button>
     </div>
     <div>
@@ -20,6 +20,19 @@
         <option value="Srilanka">Srilanka</option>
      </select>
     </div>
+    <div> 
+        <button id="orange">Orange</button>
+        <button id="blue">Blue</button>   
+    </div>
 </body>
+<script>
+       function clickHandler( color ){
+          return function () {
+            document.body.style.backgroundColor=color
+          }
+       }
+       document.getElementById("orange").onclick=clickHandler("orange")
+       document.getElementById("blue").onclick=clickHandler("blue")
+</script>
 <script src="script.js"></script>
 </html>
