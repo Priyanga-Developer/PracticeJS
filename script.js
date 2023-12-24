@@ -38,6 +38,7 @@
 
 // Calculator
 
+
 var a =prompt("Enter the first number");
 var b=prompt("Enter the second number");
 var c=Number(a)+Number(b);
@@ -273,7 +274,7 @@ x=3.14;
 console.log(x)
 let array1=[1,3,5,6,7]
 document.write(array1)
-document.write(array2)
+// document.write(array2)
 try{
    throw new Error (err.message)
 }
@@ -284,4 +285,40 @@ finally{
     document.write(array1)
 }
 
+
+//This in method
+
+const person={
+    firstName: "Priya",
+    lastName:"Priyanga",
+    fullName:function(){
+        return this.firstName+this.lastName;
+    }, //normal function
+    secondfullName:()=>this.firstName,
+    thirdfullName:()=>this,
+}
+console.log(person.fullName()) // Priya Priyanga
+console.log(person.secondfullName()) //undefined
+console.log(person.thirdfullName()) // window object
+
+//call()
+
+let employee1={ firstName:"John",secondName:"Doe"}
+let employee2={ firstName:"Radson",secondName:"Doe"}
+let invite={
+    fullName:function(greeting1,greeting2){
+          console.log(greeting1 + this.firstName + this.secondName +greeting2);
+    }
+}
+invite.fullName.call(employee1,"Hello!","How are you?") // Hello! John Doe ,How are you?
+
+//apply()
+let employee3={ firstName:"John",secondName:"Doe"}
+let employee4={ firstName:"Radson",secondName:"Doe"}
+let invite1={
+    fullName:function(greeting1,greeting2){
+          console.log(greeting1 + this.firstName + this.secondName +greeting2);
+    }
+}
+invite1.fullName.apply(employee4,["Hello!","How are you?"]) // Hello! Rdson Doe ,How are you?
 
