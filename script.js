@@ -322,3 +322,79 @@ let invite1={
 }
 invite1.fullName.apply(employee4,["Hello!","How are you?"]) // Hello! Rdson Doe ,How are you?
 
+//bind()
+let employee5={ firstName:"John",secondName:"Doe"}
+let employee6={ firstName:"Radson",secondName:"Doe"}
+let invite2={
+    fullName:function(greeting1,greeting2){
+          console.log(greeting1 + this.firstName + this.secondName +greeting2);
+    }
+}
+ let employeeName1=invite2.fullName.bind(employee5)
+ let employeeName2=invite2.fullName.bind(employee6) 
+ employeeName1("Hello","How are you?")
+ employeeName2("Hello","Good Morning!")
+
+ const person2 = {
+    firstName:"John",
+    lastName: "Doe",
+    fullName: function () {
+      return this.firstName + " " + this.lastName;
+    }
+  }
+  const member = {
+    firstName:"Hege",
+    lastName: "Nilsen",
+  }
+  
+  let fullName = person.fullName.bind(member);
+
+ //bind helps in this keyword preserved in callback function
+ const person3 = {
+    firstName:"John",
+    lastName: "Doe",
+    fullName: function () {
+      console.log( this.firstName + " " + this.lastName)
+    }
+  }
+ let bindfunc=person3.fullName.bind(person3)
+ setTimeout(bindfunc,3000)
+//map
+ const personName=["Priya","Riya","Diya"];
+ const num=[1,2,3]
+ const nummap=num.map((num)=>num*2)
+ console.log(nummap)// [2,4,6]
+ const newmap=personName.map((eachname)=>{
+    console.log("Hello!"+eachname) //Hello! Priya Hello! Riya Hello! Diya
+ })
+  const newarraymap=num.map(function (element,index,array) {
+     console.log(element);//3
+     console.log(index);//2
+     console.log(array);//[1,2,3]
+  })
+
+
+//filter 
+const personName2=["Geetha","Riya","Diya"]
+const newFilter=personName2.filter((eachname)=>{
+   return eachname.length<5 
+ 
+}
+)
+console.log(newFilter)// ["Riya","Diya"]
+
+// reduce
+
+const numbers=[12,13,14,16]
+const reducedArray=numbers.reduce((accumulator ,currentValue,index)=>{
+    return   accumulator+currentValue 
+})
+console.log(reducedArray);//55 index startes from 1
+
+const reducedArray2=numbers.reduce((accumulator ,currentValue,index)=>{
+    return   accumulator+currentValue 
+},100)
+console.log(reducedArray2);//155 ,takes 100 as initial value and index starts from 0
+
+const numbers2=[1,2,3,4,5]
+numbers2.forEach(numbers2=>console.log( numbers2))
