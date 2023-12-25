@@ -447,3 +447,50 @@ let p=document.createElement("p")
 document.querySelector(".block").appendChild(div).appendChild(p).appendChild(document.createTextNode("Testing"))
 
 // /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/
+
+let newuser1={
+    name:"priya",
+    city:"bangalore",
+    login(){
+        console.log("Hi!",this.name+ "welcome to ",this.city)
+    },
+    logout(){
+        console.log("Thank you"+ this.name)
+    }
+}
+let newuser2={
+    name:"priya",
+    city:"bangalore",
+    login(){
+        console.log("Hi!",this.name+ "welcome to ",this.city)
+    },
+    logout(){
+        console.log("Thank you"+ this.name)
+    }
+}
+let newuser3={
+    name:"priya",
+    city:"bangalore",
+    login(){
+        console.log("Hi!",this.name+ "welcome to ",this.city)
+    },
+    logout(){
+        console.log("Thank you"+ this.name)
+    }
+}
+newuser1.login()
+
+class User{
+    constructor(name,city){
+          this.name=name,
+          this.city=city
+    }
+    login(){
+        console.log("Hi!",this.name+ "welcome to ",this.city)
+    }
+    logout(){
+        console.log("Thank you"+ this.name)
+    }
+}
+let userOne1=new User("Priya","chennai")
+userOne1.login()
