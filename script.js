@@ -441,3 +441,9 @@ console.log(objectdefine);
 console.log(Object.entries(object1))//obj to arr
 console.log(Object.fromEntries(Object.entries(object1)));//arr to obj with properties
 console.log(Object.values(object1));/// to array
+
+let div=document.createElement("div")
+let p=document.createElement("p")
+document.querySelector(".block").appendChild(div).appendChild(p).appendChild(document.createTextNode("Testing"))
+
+// /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/
