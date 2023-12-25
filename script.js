@@ -481,16 +481,68 @@ let newuser3={
 newuser1.login()
 
 class User{
+    static userCount=0;
     constructor(name,city){
           this.name=name,
-          this.city=city
+          this.city=city,
+          User.userCount++ //classname.staticproperty
     }
-    login(){
-        console.log("Hi!",this.name+ "welcome to ",this.city)
-    }
-    logout(){
-        console.log("Thank you"+ this.name)
+    login(){console.log("Hi!",this.name+ "welcome to ",this.city)}
+    logout(){console.log("Thank you"+ this.name)}
+    static totalusers(){ //static method
+        console.log("Total users",User.userCount)
     }
 }
 let userOne1=new User("Priya","chennai")
+let userOne2=new User("Sruthi","chennai")
 userOne1.login()
+console.log(User.userCount)//2
+User.totalusers();
+
+//Inheritance
+
+class PaidUsers extends User{
+    constructor(name,city,storage){
+        super(name,city)
+        this.storage=storage
+    }
+    login(){
+        console.log("Thank you for the support");
+        return this // help in method chaining and return the obj
+    }//overrides the parent login method
+    message(){
+        console.log(`You have ${this.storage}GB`);
+    }
+}
+
+let PaidUser1=new PaidUsers("Riya","Mumbai",100)
+console.log(PaidUser1);
+PaidUser1.message();
+//Method Chaining
+PaidUser1.login().message()
+// userOne1.message()//creates an error,not having access to parent
+
+
+//set ,get,private
+
+class Temperature{
+    constructor(city,temp){
+        this.city=city
+        this._temp=temp //_temp means it is private property accessed only inside the class
+                           //it allows us to get value outside the class but we should not access
+    }
+  get temp(){
+    return this._temp; //150
+  }
+  set temp(temp){
+    if(temp>100)
+      temp=100
+    this._temp=temp 
+  }
+
+
+}
+
+let city1=new Temperature("chennai",150)
+city1.temp=160 //we have to give new value bcoz we set new value
+console.log(city1.temp)
