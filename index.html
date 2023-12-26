@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS practice</title>
      <link rel="stylesheet" href="index.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="block">
@@ -26,6 +27,12 @@
     </div>
 </body>
 <script>
+    
+$(document).ready(function(){
+       $(p).click(function(){
+           $(this).hide();
+       })
+})
        function clickHandler( color ){
           return function () {
             document.body.style.backgroundColor=color
