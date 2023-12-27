@@ -546,3 +546,23 @@ class Temperature{
 let city1=new Temperature("chennai",150)
 city1.temp=160 //we have to give new value bcoz we set new value
 console.log(city1.temp)
+
+const obj={
+    flag:1,
+    toString:function(){
+        return this.flag++;
+    },
+}
+
+if(obj==1&&obj==2&&obj==3){
+    console.log("Impressive.isn't it?");
+}
+else{
+    console.log("The magic didn't work");
+}
+
+const arrayNew=[[1,2],[3,4],[5,6]]
+const flattened=arrayNew.reduce((accumulator,array)=>{
+    // debugger;
+    return  accumulator.concat(array)
+},[])
