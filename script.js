@@ -566,3 +566,24 @@ const flattened=arrayNew.reduce((accumulator,array)=>{
     // debugger;
     return  accumulator.concat(array)
 },[])
+
+function innerfunction(name) {
+  console.log("Hello"+name);
+}
+function outerfunction(callback) {
+    let name = prompt("Enter your name")
+    callback(name)
+}
+
+outerfunction(innerfunction)
+
+let postData= new XMLHttpRequest();
+postData.open("GET","https://jsonplaceholder.typicode.com/posts", true);
+postData.send();
+postData.onload=function(){
+    console.log(postData.responseText)
+}
+
+
+
+
