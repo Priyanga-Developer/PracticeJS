@@ -597,3 +597,50 @@ let promiseValue=new Promise((resolve,reject)=>{
 .catch(()=>console.log("Your ticket is not booked"))
   
 
+let promise1=new Promise((resolve,reject)=>{
+    let success=true;
+    if(success){
+       resolve("Hi,I am in chennai")
+    }
+    else{
+        reject("Hi, I did not reach chennai")
+    }
+})
+let promise2=new Promise((resolve,reject)=>{
+    let success=true;
+    if(success){
+       resolve("Hi,I am in Mumbai")
+    }
+    else{
+        reject("Hi, I did not reach ")
+    }
+})
+let promise3=new Promise((resolve,reject)=>{
+    let success=false;
+    if(success){
+       resolve("Hi,I am in bangalore")
+    }
+    else{
+        reject("Hi, I did not reach ")
+    }
+})
+Promise.race([promise1,promise2,promise3])
+
+// Hi ,I am in chennai
+.then((message)=> console.log(message)) 
+.catch((message)=>console.log(message))
+
+const newFunction1=async()=>{
+     try{
+        const response=await fetch("https://jsonplaceholder.typicode.com/posts");
+        const data=await response.json();
+        console.log(data);
+     }
+     catch(err){
+        console.log(err);
+     }
+     finally{
+        console.log("Hello World");
+     }
+}
+newFunction1();
