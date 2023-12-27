@@ -584,6 +584,16 @@ postData.onload=function(){
     console.log(postData.responseText)
 }
 
-
-
+let promiseValue=new Promise((resolve,reject)=>{
+    let bookingStatus=false
+    if(bookingStatus){
+        resolve()
+    }
+    else{
+        reject()
+    }
+})
+.then(()=>console.log("your ticket is booked"))
+.catch(()=>console.log("Your ticket is not booked"))
+  
 
