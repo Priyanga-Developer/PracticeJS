@@ -644,3 +644,44 @@ const newFunction1=async()=>{
      }
 }
 newFunction1();
+
+let counter=0;
+
+
+const getData=()=>{
+    console.log("resizing",counter++)
+}
+
+const doSomeMagic =(func,delay)=>{
+    let inthrottle;
+    return (...args)=>{
+        if(!inthrottle){
+            func.apply(this,args); 
+            inthrottle=true;
+            setTimeout(()=>(inthrottle=false),delay)
+        }
+    }
+}
+const betterFunction=doSomeMagic(getData,3000)
+window.addEventListener("resize",()=>{
+    betterFunction()
+   }) //  resizing 0 ,resizing 1,resizing 2 runs at every 3s when event triggers
+
+//    <input type="text" name="search" onkeyup="processChange()">
+   function debounce(func, timeout = 500) {
+    let timer;
+    return (...args) => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        func.apply(this, args);
+      }, timeout);
+    };
+  }
+  function fetchResults() {
+    console.log("Fetching input suggestions");
+  }
+  const processChange = debounce(() => fetchResults());
+
+ 
+
+  
